@@ -80,7 +80,10 @@ failed_count = 0
 skip_count = 0
 dailyEasyApplyLimitReached = False
 
-re_experience = re.compile(r'[(]?\s*(\d+)\s*[)]?\s*[-to]*\s*\d*[+]*\s*year[s]?', re.IGNORECASE)
+re_experience = re.compile(
+    r'(fresher|entry[\s-]?level|no experience|0\s*[-to]*\s*2\s*(?:year|yr)s?|\d+\s*[+]?[\s-]*\d*\s*(?:year|yr)s?)',
+    re.IGNORECASE
+)
 
 desired_salary_lakhs = str(round(desired_salary / 100000, 2))
 desired_salary_monthly = str(round(desired_salary/12, 2))
